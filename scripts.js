@@ -37,26 +37,3 @@ window.addEventListener("resize", () => {
         nav.style.display = "none";
     }
 });
-
-// CSS for the button
-const style = document.createElement("style");
-style.textContent = `
-.btn {
-    background-color: #ffffff;
-    color: #1b3b6f;
-    padding: 12px 25px;
-    font-weight: bold;
-    border-radius: 6px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 20px;
-    transition: all 0.3s ease;
-    border: 2px solid #ffffff;
-}
-
-.btn:hover {
-    background-color: #ffffff;
-    color: #1b3b6f;
-    border: 2px solid #1b3b6f;
-}`;
-document.head.appendChild(style);

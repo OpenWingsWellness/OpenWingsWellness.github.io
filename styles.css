@@ -14,18 +14,18 @@ body {
 }
 
 header {
-    position: sticky;
+    position: sticky; /* remains sticky instead of fixed to avoid overlap issues */
     top: 0;
+    width: 100%;
     background-color: #ffffff;
-    border-bottom: 1px solid #eaeaea;
     z-index: 1000;
+    border-bottom: 1px solid #eaeaea;
 }
 
 .header-container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    flex-wrap: nowrap;
+    align-items: center;
 }
 
 .logo {
@@ -64,6 +64,7 @@ nav a:hover {
 .banner p {
     margin-top: 10px;
     font-size: 1.2em;
+    text-align: center; /* Maintain banner text centered clearly */
 }
 
 .btn {
@@ -89,6 +90,21 @@ nav a:hover {
 .section {
     padding: 60px 0;
     border-bottom: 1px solid #f1f1f1;
+}
+
+.section p,
+.section ul {
+    text-align: justify;
+    hyphens: auto;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section ul {
+    padding-left: 25px;
 }
 
 h2 {
@@ -133,64 +149,120 @@ footer {
     text-align: center;
 }
 
+/* Hamburger menu adjustments */
+.hamburger {
+    display: none; /* Hidden by default, shown on mobile only */
+    cursor: pointer;
+    padding: 10px; /* Padding for better touch area on mobile */
+}
+
 @media (max-width: 768px) {
+    body,
+    html {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .container {
+        padding: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    header {
+        padding: 10px 15px;
+    }
+
     .header-container {
-        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
-        gap: 10px;
     }
 
     .logo {
-        width: 120px;
-        margin-bottom: 10px;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 5px;
-        align-items: center;
-    }
-}
-
-/* Hamburger Menu Icon Styles */
-.hamburger {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: #1b3b6f;
-}
-
-/* Responsive styles for Mobile View */
-@media (max-width: 768px) {
-    nav {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        background-color: #fff;
-        margin-top: 10px;
-    }
-
-    nav a {
-        margin: 8px 0;
+        width: 50px;
+        height: auto;
     }
 
     .hamburger {
-        display: flex;
+        display: flex; /* Show hamburger icon only on mobile screens */
+        flex-direction: column;
+        gap: 4px;
+        padding: 12px; /* Additional padding for touch-friendliness */
     }
 
-    .header-container {
-        flex-direction: row;
-        justify-content: space-between;
+    .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: #1b3b6f;
+    }
+
+    nav {
+        position: fixed;
+        top: 60px; /* aligns menu below header clearly */
+        right: 0;
+        height: auto;
+        background-color: #ffffff;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+        border-bottom: 1px solid #eee;
     }
 
     nav.active {
         display: flex;
+    }
+
+    .banner {
+        padding: 40px 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .banner h1 {
+        font-size: 1.6rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 60px 10px 30px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    p,
+    ul {
+        font-size: 0.95rem;
+    }
+
+    form input,
+    form textarea,
+    form button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    footer {
+        padding: 15px 10px;
     }
 }
