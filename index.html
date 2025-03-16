@@ -1,23 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenWings Wellness</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>OpenWings Wellness</title>
+        <link rel="stylesheet" href="styles.css" />
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <img
+                    src="assets/logo.png"
+                    alt="OpenWings Wellness Logo"
+                    class="logo"
+                />
+                <nav>
+                    <a href="#about">About Us</a>
+                    <a href="#services">Services</a>
+                    <a href="#tech">Our Technology</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+        </header>
 
-    <section>
-        <h1>OpenWings Wellness</h1>
-        <p>OpenWings Wellness provides Counseling, Therapy, and Wellness services to individuals, couples, and families. We are dedicated to providing a safe, supportive, and non-judgmental environment for our clients to explore their thoughts, feelings, and behaviors. Our goal is to help our clients develop the skills and tools they need to live a more fulfilling and balanced life.</p>
-    </section>
+        <!-- Main Banner -->
+        <section class="banner">
+            <div class="container">
+                <h1>Empowering Relationships Through Technology</h1>
+                <p>
+                    A human-centric approach leveraging AI-driven insights for
+                    healthier connections.
+                </p>
+                <a href="#contact" class="cta-btn">Get Started</a>
+            </div>
+        </section>
 
-    <section>
-        <h2>Services</h2>
-        <p>OpenWings Wellness offers a variety of services to meet the needs of our clients. Our services include individual counseling, couples counseling, family therapy, group therapy, and wellness workshops. We also offer a range of wellness services, including yoga, meditation, and mindfulness training.</p>
-    </section>
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <h2>About OpenWings Wellness</h2>
+                <p>
+                    OpenWings is a forward-thinking initiative dedicated to
+                    enhancing personal and professional lives through
+                    technology. We believe in meaningful impact, providing
+                    innovative solutions tailored to individual needs.
+                </p>
+            </div>
+        </section>
 
-    
-    
-</body>
+        <!-- Services Section -->
+        <section id="services">
+            <div class="container">
+                <h2>Personalized Relationship Support</h2>
+                <p>
+                    Established in 2019, OpenWings Wellness specializes in
+                    helping individuals navigate complex relationship
+                    dynamics—be it partners, family, or other close connections.
+                    Each client is paired with a dedicated counselor for regular
+                    check-ins and actionable guidance.
+                </p>
+            </div>
+        </section>
+
+        <!-- Technology Section -->
+        <section id="tech">
+            <div class="container">
+                <h2>Our AI-Driven Approach</h2>
+                <p>
+                    We continuously integrate advanced digital tools to provide
+                    deeper, data-driven insights and enhance user experience.
+                    Stay tuned for our upcoming innovations designed to
+                    transform the way people connect, grow, and thrive.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form
+                    action="https://formsubmit.co/info@openwingswellness.com"
+                    method="POST"
+                >
+                    <input
+                        type="hidden"
+                        name="_subject"
+                        value="New Inquiry from OpenWings Website!"
+                    />
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Your Name"
+                        required
+                    />
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Your Email"
+                        required
+                    />
+                    <textarea
+                        name="message"
+                        placeholder="Your Message"
+                        required
+                    ></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 OpenWings Wellness. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script src="scripts.js"></script>
+    </body>
 </html>
