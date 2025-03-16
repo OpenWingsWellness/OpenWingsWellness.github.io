@@ -136,10 +136,12 @@
         <section id="contact" class="section">
             <div class="container">
                 <h2>Contact Us</h2>
-                <form
-                    action="https://formsubmit.co/info@openwingswellness.com"
-                    method="POST"
-                >
+                <form action="https://api.staticforms.xyz/submit" method="POST">
+                    <input
+                        type="hidden"
+                        name="accessKey"
+                        value="42814b14-13fd-4ca1-9d9e-ddb59995f614"
+                    />
                     <input
                         type="text"
                         name="name"
@@ -152,11 +154,19 @@
                         placeholder="Your Email"
                         required
                     />
+                    <input type="text" name="phone" />
                     <textarea
                         name="message"
                         placeholder="Your Message"
                         required
                     ></textarea>
+                    <!-- Honeypot field for spam protection -->
+                    <input type="text" name="honeypot" style="display: none" />
+                    <input
+                        type="hidden"
+                        name="redirectTo"
+                        value="https://www.openwingswellness.com/"
+                    />
                     <button type="submit">Send Message</button>
                 </form>
             </div>
