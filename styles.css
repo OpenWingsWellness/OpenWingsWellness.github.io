@@ -266,3 +266,25 @@ footer {
         padding: 15px 10px;
     }
 }
+
+.btn-service {
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 12px 30px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    margin: 25px auto;
+    transition: all 0.3s ease;
+    border: 2px solid #28a745;
+}
+
+.btn-service:hover {
+    background-color: #ffffff;
+    color: #28a745;
+    border: 2px solid #28a745;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}

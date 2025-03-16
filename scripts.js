@@ -37,3 +37,13 @@ window.addEventListener("resize", () => {
         nav.style.display = "none";
     }
 });
+
+// Additional code to ensure proper accessibility for the navigation menu
+document.addEventListener("DOMContentLoaded", () => {
+    const navMenu = document.getElementById("nav-menu");
+    const links = navMenu.querySelectorAll("a");
+    links.forEach((link) => {
+        link.setAttribute("tabindex", "0");
+        link.setAttribute("role", "menuitem");
+    });
+});
