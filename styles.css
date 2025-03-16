@@ -67,17 +67,22 @@ nav a:hover {
 }
 
 .btn {
-    background-color: #1b3b6f;
-    color: white;
+    background-color: #ffffff;
+    color: #1b3b6f;
+    padding: 12px 25px;
+    font-weight: bold;
+    border-radius: 6px;
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
     display: inline-block;
     margin-top: 20px;
+    transition: all 0.3s ease;
+    border: 2px solid #ffffff;
 }
 
 .btn:hover {
-    background-color: #265fa7;
+    background-color: #ffffff;
+    color: #1b3b6f;
+    border: 2px solid #1b3b6f;
 }
 
 /* Section styling */
