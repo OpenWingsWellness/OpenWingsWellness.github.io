@@ -1,135 +1,191 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: "Poppins", sans-serif;
-    color: #444;
+    margin: 0;
+    padding: 0;
     background-color: #ffffff;
+    color: #333333;
 }
 
 .container {
     width: 90%;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
     padding: 20px;
 }
 
 header {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+    z-index: 1000;
+}
+
+.header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 0;
-    background-color: #ffffff;
-    border-bottom: 2px solid #e1e8ee;
+    flex-wrap: nowrap;
 }
 
 .logo {
-    width: 180px;
+    width: 80px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
 }
 
 nav a {
-    color: #1b3b6f;
     text-decoration: none;
-    margin-left: 20px;
+    color: #1b3b6f;
     font-weight: 500;
+    padding: 8px;
 }
 
 nav a:hover {
-    color: #007bff;
+    color: #265fa7;
 }
 
+/* Banner adjustments */
 .banner {
-    background: linear-gradient(to right, #1b3b6f, #265fa7);
-    color: #fff;
-    padding: 80px 20px;
     text-align: center;
+    background-color: #1b3b6f;
+    color: white;
+    padding: 80px 0;
 }
 
 .banner h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
 }
 
 .banner p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    font-size: 1.2em;
 }
 
 .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #ffffff;
-    color: #1b3b6f;
-    border-radius: 4px;
+    background-color: #1b3b6f;
+    color: white;
     text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
 }
 
 .btn:hover {
-    background-color: #f0f5ff;
+    background-color: #265fa7;
 }
 
+/* Section styling */
 .section {
     padding: 60px 0;
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: 1px solid #f1f1f1;
 }
 
-.section h2 {
+h2 {
     color: #1b3b6f;
-    font-size: 2rem;
+    text-align: center;
     margin-bottom: 15px;
 }
 
-.section p,
-.section ul {
-    max-width: 900px;
-    margin: auto;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-.section ul {
-    margin-top: 15px;
-    text-align: left;
-    list-style-type: disc;
-    padding-left: 40px;
-}
-
+/* Form styling */
 form {
-    max-width: 600px;
-    margin: auto;
     display: flex;
     flex-direction: column;
+    gap: 15px;
 }
 
 form input,
 form textarea {
     padding: 12px;
-    margin-bottom: 12px;
-    border: 1px solid #ccc;
     border-radius: 5px;
+    border: 1px solid #ddd;
 }
 
-button[type="submit"] {
+form button {
+    padding: 12px;
     background-color: #1b3b6f;
     color: white;
-    padding: 12px;
-    border-radius: 5px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
-button[type="submit"]:hover {
+form button:hover {
     background-color: #14305b;
 }
 
+/* Footer */
 footer {
     background-color: #1b3b6f;
     color: white;
+    padding: 20px 0;
     text-align: center;
-    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo {
+        width: 120px;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+}
+
+/* Hamburger Menu Icon Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #1b3b6f;
+}
+
+/* Responsive styles for Mobile View */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        margin-top: 10px;
+    }
+
+    nav a {
+        margin: 8px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav.active {
+        display: flex;
+    }
 }
