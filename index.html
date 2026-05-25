@@ -112,11 +112,11 @@
         <section id="contact" class="section">
             <div class="container">
                 <h2>contact us</h2>
-                <form action="https://api.staticforms.xyz/submit" method="POST">
+                <form action="https://api.staticforms.dev/submit" method="POST">
                     <input
                         type="hidden"
-                        name="accessKey"
-                        value="273f91fd-6026-47f0-9339-fed44d9aca34"
+                        name="apiKey"
+                        value="sf_99a899fcf35cb7b56d1fc612"
                     />
                     <input
                         type="text"
@@ -136,22 +136,12 @@
                         placeholder="Your Message"
                         required
                     ></textarea>
-                    <input type="text" name="honeypot" style="display: none" />
+                    <input type="hidden" name="honeypot" />
                     <input
                         type="hidden"
                         name="redirectTo"
                         value="https://www.openwingswellness.com"
                     />
-                    <!-- reCAPTCHA integration -->
-                    <div
-                        class="g-recaptcha"
-                        data-sitekey="6LfBlv8qAAAAAPBmjkIOqgzLMBjmyKs9MX6ql3cO"
-                    ></div>
-                    <script
-                        src="https://www.google.com/recaptcha/api.js"
-                        async
-                        defer
-                    ></script>
                     <button type="submit">send message</button>
                 </form>
             </div>
