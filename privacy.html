@@ -50,7 +50,7 @@
                     required email addresses, bookings, payments, marketing, and
                     information held by us do not apply to OpenWings Daily.
                     For OpenWings Daily, Section 9 governs the app-specific practices.</p>
-                <p><strong>Last updated: 28 September 2026.</strong></p>
+                <p><strong>Last updated: 29 September 2026.</strong></p>
 
 
                 <p>
@@ -272,11 +272,12 @@
                         <code>huggingface.co</code>, its <code>hf.co</code> download servers and
                         <code>cdn.jsdelivr.net</code>, and only while a download you started is
                         running. See Section 9.5.</li>
-                    <li><strong>Google Play, for updates.</strong> The app may ask the Google
-                        Play Store app on your phone whether a newer version of OpenWings Daily is
-                        available, and if you agree, Google Play downloads and installs it. That
-                        check and download are handled by Google Play under Google's own privacy
-                        policy; the app sends nothing about you to OpenWings. See Section 9.14.</li>
+                    <li><strong>Google Play, for updates and ratings.</strong> The app may ask the
+                        Google Play Store app on your phone whether a newer version of OpenWings Daily
+                        is available, and if you agree, Google Play downloads and installs it. From
+                        version 3.1.1 it may also, once, ask Google Play to show its own rating window.
+                        Both are handled by Google Play under Google's own privacy policy; the app
+                        sends nothing about you to OpenWings. See Section 9.14.</li>
                     <li><strong>Your phone's own speech service</strong>, which may use the
                         internet as described in Section 9.4. That request is made by your phone's
                         speech service, not by the app.</li>
@@ -398,20 +399,35 @@
                 <h4>9.9 Sharing, and backups</h4>
                 <p>Sharing is always started by you. A share card is drawn on your device, shown
                     to you exactly as it will be sent, and only then handed to the app you pick in
-                    Android's share sheet. A progress card carries your streak, your session count,
-                    a quote and our logo. A reflection card carries the words you kept and the line
+                    Android's share sheet. A pause card (from version 3.1.2, when you send a practice
+                    to someone) carries the practice's name and length, a quote and our logo, and your
+                    streak only if you switch it on; its link to Google Play is tagged with the practice
+                    (<code>utm_source=pause</code>), never with you. A milestone or week card carries
+                    your streak, your session count, a quote and our logo. A reflection card carries the words you kept and the line
                     written back to you, and your name and mood only if you switch them on. A weekly
                     card carries its shape and a gentle line, and your kept words or how the week
                     felt only if you switch them on. A share can also carry a short invitation with
                     a link to OpenWings Daily on Google Play; you see it before sending, it says
                     nothing about you, and you can switch it off. Nothing else from your history is
                     on a card. Once shared, the receiving app's own privacy terms apply.</p>
+                <p><strong>Sharing the app itself</strong> (from version 3.1.1). <strong>Share
+                    OpenWings Daily</strong>, on the You screen and in About OpenWings Daily, shows
+                    you a picture about the app (what it is and what it offers; nothing about you or
+                    your history is on it), then hands Android's share sheet that picture, a short
+                    message and a link to the app on Google Play. The link carries a campaign tag (<code>utm_source=openwings_app</code>,
+                    <code>utm_campaign=share_app</code>) so that Google Play Console can show us how
+                    many people reached the app from a share, as a total. The tag names the button,
+                    never you, and nothing else is sent.</p>
                 <p><strong>Backup and your words as a file.</strong> In <strong>Settings →
                     Privacy and your data</strong> you can save a complete backup of everything the
                     app keeps, or your words as a plain text file, to a place you choose in
                     Android's own "save to" screen, and restore a backup on a new phone. The app is
                     given only the one file you create or pick, needs no storage permission and
-                    sends the file nowhere. The file is not encrypted, so keep it somewhere private.
+                    sends the file nowhere. From version 3.1.2 you can add a password when you save a
+                    backup: the file is then encrypted on your phone (AES-256-GCM, with a key made
+                    from the password) before it is saved, only that password opens it, and neither
+                    you nor we can recover a forgotten one. Without a password the file is not
+                    encrypted, so keep it somewhere private.
                     Restoring replaces what is on the phone, after you confirm.</p>
 
                 <h4>9.10 Optional details about you</h4>
@@ -458,14 +474,21 @@
                     booking and payment for our counselling services happen there, under Sections
                     1–8 of this policy, and never inside the app.</p>
 
-                <h4>9.14 Updates</h4>
-                <p>When a newer version is available on Google Play, the app may offer it once
-                    on Today and in About OpenWings Daily. If you agree, Google Play downloads the
-                    update while you carry on and installs it when you choose to restart. The check
-                    and the download are made by the Google Play Store app on your phone, under
-                    Google's privacy policy; OpenWings receives nothing about you or your use of the
-                    app. You can say "Later", and the app will not offer the same version again for
-                    a week.</p>
+                <h4>9.14 Updates and ratings</h4>
+                <p>When a newer version is available on Google Play, the app offers it in a quiet
+                    line on Today, Explore and You, and in About OpenWings Daily, each time the app
+                    is opened until it is up to date. "Later" hides the line until the next time you
+                    open the app. If you agree, Google Play downloads the update while you carry on
+                    and installs it when you choose to restart. The check and the download are made
+                    by the Google Play Store app on your phone, under Google's privacy policy;
+                    OpenWings receives nothing about you or your use of the app.</p>
+                <p><strong>Ratings</strong> (from version 3.1.1). Once, after a few practices you
+                    said helped ("How do you feel now?"), the app may ask Google Play to show its own
+                    rating window; it is never asked for after "I need a moment", in quiet mode, or
+                    if you have already opened the Play page from <strong>Rate OpenWings Daily</strong>
+                    in About. Google Play decides whether to show it and keeps any rating or review
+                    you give under Google's privacy policy. The app is never told whether you rated
+                    or what you wrote, and it sends nothing about you to OpenWings.</p>
 
                 <h4>9.15 Retention and deletion</h4>
                 <p>Information stored by the app remains on your device until you remove it. To
@@ -529,7 +552,7 @@
                     href="mailto:info@openwingswellness.com">info@openwingswellness.com</a> if you
                     have questions about OpenWings Daily or this policy.</p>
 
-                <p><em>This section was last updated on 28 September 2026 and applies to version 3.0.1 of the app and later.</em></p>
+                <p><em>This section was last updated on 29 September 2026 and applies to version 3.1.2 of the app and later.</em></p>
             </div>
         </section>
 
